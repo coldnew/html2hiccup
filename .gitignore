@@ -2,3 +2,4 @@
 /target
 /.nrepl-port
 /.repl-history
+/resources/bower_components/

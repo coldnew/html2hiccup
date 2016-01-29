@@ -1,0 +1,19 @@
+{
+  "name": "html2hiccup",
+  "authors": [
+    "Yen-Chin, Lee <coldnew.tw@gmail.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/vendors",
+    "test",
+    "tests",
+    "screenshots"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "codemirror": "5.10.0"
+  }
+}
