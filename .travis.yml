@@ -1,0 +1,20 @@
+language: clojure
+
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+
+install:
+  - wget -O boot https://github.com/boot-clj/boot-bin/releases/download/2.5.5/boot.sh
+  - chmod 755 boot
+  - ./boot -V
+
+notifications:
+  email: false
+
+before_script:
+  - npm install -g bower
+  - bower install
+
+script:
+  - ./boot prod
