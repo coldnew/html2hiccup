@@ -13,6 +13,12 @@ install:
   - chmod 755 boot
   - ./boot -V
 
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/.boot/cache
+  - $HOME/bin
+
 notifications:
   email: false
 
