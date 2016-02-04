@@ -1,11 +1,15 @@
 language: clojure
 
+env:
+  global:
+    - GH_REF: github.com/coldnew/html2hiccup.git
+
 jdk:
   - oraclejdk7
   - oraclejdk8
 
 install:
-  - wget -O boot https://github.com/boot-clj/boot-bin/releases/download/2.5.5/boot.sh
+  - wget -O boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
   - chmod 755 boot
   - ./boot -V
 

@@ -1,10 +1,16 @@
 (ns html2hiccup.app
-  (:require [goog.dom     :as gdom]
-            [om.next      :as om   :refer-macros [defui]]
-            [sablono.core :as html :refer-macros [html]]
-            [hickory.core :as hickory]
+  (:require [goog.dom       :as gdom]
+            [om.next        :as om   :refer-macros [defui]]
+            [sablono.core   :as html :refer-macros [html]]
+            [hickory.core   :as hickory]
             [clojure.string :as str]
-            [cljsjs.codemirror]))
+            ;; codemirror and it's friends
+            [cljsjs.codemirror]
+            [cljsjs.codemirror.mode.xml]
+            [cljsjs.codemirror.mode.clojure]
+            [cljsjs.codemirror.addon.edit.closetag]
+            [cljsjs.codemirror.addon.edit.closebrackets]
+            [cljsjs.codemirror.addon.edit.matchbrackets]))
 
 (enable-console-print!)
 
