@@ -1,4 +1,5 @@
 # html2hiccup
+[![Dependencies Status](https://jarkeeper.com/coldnew/html2hiccup/status.png)](https://jarkeeper.com/coldnew/html2hiccup)
 
 A [Hoplon][3] project designed to...well, that part is up to you.
 
