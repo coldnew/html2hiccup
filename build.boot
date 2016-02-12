@@ -26,7 +26,7 @@
 
 
 (deftask build []
-  (comp (speak)
+  (comp
         (cljs)))
 
 (deftask run []
@@ -34,6 +34,7 @@
         (watch)
         (cljs-repl)
         (reload)
+        (speak)
         (build)))
 
 (deftask production []
