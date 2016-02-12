@@ -24,7 +24,7 @@ cd $OUT
 git init
 
 # inside this git repo we'll pretend to be a new user
-git config user.name "Travis CI"
+git config user.name "CI-Server"
 git config user.email "coldnew.tw@gmail.com"
 
 # We permit following exit with error

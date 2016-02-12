@@ -4,7 +4,6 @@
                  [pandeiro/boot-http            "0.6.3"      :scope "test"]
                  [adzerk/boot-reload            "0.4.4"]
                  [hoplon/boot-hoplon            "0.1.13"]
-                 [degree9/boot-bower            "0.2.3"]
                  [org.clojure/clojure           "1.8.0"]
                  [org.clojure/clojurescript     "1.7.228"]
                  [hickory                       "0.6.0"]
@@ -20,17 +19,11 @@
  :resource-paths  #{"resources"})
 
 (require
- '[degree9.boot-bower       :refer [bower]]
- '[adzerk.boot-cljs         :refer [cljs]]
- '[adzerk.boot-cljs-repl    :refer [cljs-repl start-repl]]
- '[adzerk.boot-reload       :refer [reload]]
- '[pandeiro.boot-http    :refer [serve]])
+ '[adzerk.boot-cljs              :refer [cljs]]
+ '[adzerk.boot-cljs-repl         :refer [cljs-repl start-repl]]
+ '[adzerk.boot-reload            :refer [reload]]
+ '[pandeiro.boot-http            :refer [serve]])
 
-(deftask fetch-deps
-  "Fetch extra deps."
-  []
-  (bower :install {:bootstrap  "twbs/bootstrap#v3.3.6"
-                   :codemirror "codemirror/CodeMirror#5.10.0"}))
 
 (deftask build []
   (comp (speak)
