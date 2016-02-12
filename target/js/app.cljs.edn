@@ -1,3 +1,0 @@
-{:require  [html2hiccup.app]
- :init-fns [html2hiccup.app/init]
- :compiler-options {:asset-path "js/app.out"}}
