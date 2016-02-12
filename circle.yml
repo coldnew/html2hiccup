@@ -30,5 +30,5 @@ deployment:
   publish:
     branch: master
     commands:
-      - sed -i 's%https://${GH_TOKEN}@${GH_REF}%git@github.com:coldnew/html2hiccup.git' deploy.sh
+      - sed -i 's%https://${GH_TOKEN}@${GH_REF}%git@github.com:coldnew/html2hiccup.git%g' deploy.sh
       - ./deploy.sh
