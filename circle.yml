@@ -15,6 +15,7 @@ dependencies:
     - wget -O boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
     - chmod 755 boot
     - ./boot -V
+    - ./boot checkout
   cache_directories:
     - node_modules
     - resources/bower_components
