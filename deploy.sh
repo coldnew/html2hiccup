@@ -18,6 +18,7 @@ git clone "https://${GH_TOKEN}@${GH_REF}" $OUT
 # Copy all prebuild files
 cp README.* $OUT
 cp -R target/* $OUT
+cp -f circle.yml $OUT
 
 # go to the out directory and create a *new* Git repo
 cd $OUT
