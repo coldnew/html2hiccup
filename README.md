@@ -1,6 +1,6 @@
 # html2hiccup
 [![Circle CI](https://circleci.com/gh/coldnew/html2hiccup/tree/master.svg?style=svg)](https://circleci.com/gh/coldnew/html2hiccup/tree/master)
-[![Dependencies Status](https://jarkeeper.com/coldnew/html2hiccup/status.png)](https://jarkeeper.com/coldnew/html2hiccup)
+[![Dependencies Status](https://jarkeeper.com/coldnew/html2hiccup/status.svg)](https://jarkeeper.com/coldnew/html2hiccup)
 
 A [Hoplon][3] project designed to...well, that part is up to you.
 
