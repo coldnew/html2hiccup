@@ -22,7 +22,7 @@
     :else x))
 
 (defn class
-  "Normalize `class` into a set of classes."
+  "Normalize `class` into a vector of classes."
   [class]
   (cond
     (nil? class)
@@ -30,27 +30,29 @@
 
     (list? class)
     (if (symbol? (first class))
-      #{class}
-      (set (map class-name class)))
+      [class]
+      (map class-name class))
 
     (symbol? class)
-    #{class}
+    [class]
 
     (string? class)
-    #{class}
+    [class]
 
     (keyword? class)
-    #{(class-name class)}
+    [(class-name class)]
+
     (and (or (set? class)
              (sequential? class))
          (every? #(or (keyword? %)
                       (string? %))
                  class))
-    (apply sorted-set (map class-name class))
+    (mapv class-name class)
 
     (and (or (set? class)
              (sequential? class)))
-    (set (map class-name class))
+    (mapv class-name class)
+
     :else class))
 
 (defn attributes
@@ -64,8 +66,8 @@
   "Like clojure.core/merge but concatenate :class entries."
   [& maps]
   (let [maps (map attributes maps)
-        classes (map #(into #{} %) (map :class maps))
-        classes (apply set/union classes)]
+        classes (map :class maps)
+        classes (vec (dedupe (apply concat classes)))]
     (cond-> (apply merge maps)
       (not (empty? classes))
       (assoc :class classes))))
@@ -93,15 +95,26 @@
 (defn children
   "Normalize the children of a HTML element."
   [x]
-  (if (and (sequential? x)
-           (= (count x) 1))
-    (let [x (first x)]
-      (cond
-        (string? x) (list x)
-        (util/element? x) (list x)
-        (sequential? x) (seq x)
-        :else x))
-    x))
+  (->> (cond
+         (string? x)
+         (list x)
+         (util/element? x)
+         (list x)
+         (and (list? x)
+              (symbol? x))
+         (list x)
+         (list? x)
+         x
+         (and (sequential? x)
+              (sequential? (first x))
+              (not (string? (first x)))
+              (not (util/element? (first x)))
+              (= (count x) 1))
+         (children (first x))
+         (sequential? x)
+         x
+         :else (list x))
+       (remove nil?)))
 
 (defn element
   "Ensure an element vector is of the form [tag-name attrs content]."

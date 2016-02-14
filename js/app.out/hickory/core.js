@@ -21,14 +21,14 @@ hickory.core.as_hiccup = (function hickory$core$as_hiccup(this$){
 if((!((this$ == null))) && (!((this$.hickory$core$HiccupRepresentable$as_hiccup$arity$1 == null)))){
 return this$.hickory$core$HiccupRepresentable$as_hiccup$arity$1(this$);
 } else {
-var x__7145__auto__ = (((this$ == null))?null:this$);
-var m__7146__auto__ = (hickory.core.as_hiccup[goog.typeOf(x__7145__auto__)]);
-if(!((m__7146__auto__ == null))){
-return (m__7146__auto__.cljs$core$IFn$_invoke$arity$1 ? m__7146__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__7146__auto__.call(null,this$));
+var x__7141__auto__ = (((this$ == null))?null:this$);
+var m__7142__auto__ = (hickory.core.as_hiccup[goog.typeOf(x__7141__auto__)]);
+if(!((m__7142__auto__ == null))){
+return (m__7142__auto__.cljs$core$IFn$_invoke$arity$1 ? m__7142__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__7142__auto__.call(null,this$));
 } else {
-var m__7146__auto____$1 = (hickory.core.as_hiccup["_"]);
-if(!((m__7146__auto____$1 == null))){
-return (m__7146__auto____$1.cljs$core$IFn$_invoke$arity$1 ? m__7146__auto____$1.cljs$core$IFn$_invoke$arity$1(this$) : m__7146__auto____$1.call(null,this$));
+var m__7142__auto____$1 = (hickory.core.as_hiccup["_"]);
+if(!((m__7142__auto____$1 == null))){
+return (m__7142__auto____$1.cljs$core$IFn$_invoke$arity$1 ? m__7142__auto____$1.cljs$core$IFn$_invoke$arity$1(this$) : m__7142__auto____$1.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("HiccupRepresentable.as-hiccup",this$);
 }
@@ -62,14 +62,14 @@ hickory.core.as_hickory = (function hickory$core$as_hickory(this$){
 if((!((this$ == null))) && (!((this$.hickory$core$HickoryRepresentable$as_hickory$arity$1 == null)))){
 return this$.hickory$core$HickoryRepresentable$as_hickory$arity$1(this$);
 } else {
-var x__7145__auto__ = (((this$ == null))?null:this$);
-var m__7146__auto__ = (hickory.core.as_hickory[goog.typeOf(x__7145__auto__)]);
-if(!((m__7146__auto__ == null))){
-return (m__7146__auto__.cljs$core$IFn$_invoke$arity$1 ? m__7146__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__7146__auto__.call(null,this$));
+var x__7141__auto__ = (((this$ == null))?null:this$);
+var m__7142__auto__ = (hickory.core.as_hickory[goog.typeOf(x__7141__auto__)]);
+if(!((m__7142__auto__ == null))){
+return (m__7142__auto__.cljs$core$IFn$_invoke$arity$1 ? m__7142__auto__.cljs$core$IFn$_invoke$arity$1(this$) : m__7142__auto__.call(null,this$));
 } else {
-var m__7146__auto____$1 = (hickory.core.as_hickory["_"]);
-if(!((m__7146__auto____$1 == null))){
-return (m__7146__auto____$1.cljs$core$IFn$_invoke$arity$1 ? m__7146__auto____$1.cljs$core$IFn$_invoke$arity$1(this$) : m__7146__auto____$1.call(null,this$));
+var m__7142__auto____$1 = (hickory.core.as_hickory["_"]);
+if(!((m__7142__auto____$1 == null))){
+return (m__7142__auto____$1.cljs$core$IFn$_invoke$arity$1 ? m__7142__auto____$1.cljs$core$IFn$_invoke$arity$1(this$) : m__7142__auto____$1.call(null,this$));
 } else {
 throw cljs.core.missing_protocol("HickoryRepresentable.as-hickory",this$);
 }
@@ -181,9 +181,9 @@ throw (new Error([cljs.core.str("No matching clause: "),cljs.core.str(expr__1436
 }
 }));
 hickory.core.extract_doctype = (function hickory$core$extract_doctype(s){
-var temp__4657__auto__ = cljs.core.second((function (){var or__6490__auto__ = cljs.core.re_find(/<!DOCTYPE ([^>]*)>/,s);
-if(cljs.core.truth_(or__6490__auto__)){
-return or__6490__auto__;
+var temp__4657__auto__ = cljs.core.second((function (){var or__6486__auto__ = cljs.core.re_find(/<!DOCTYPE ([^>]*)>/,s);
+if(cljs.core.truth_(or__6486__auto__)){
+return or__6486__auto__;
 } else {
 return cljs.core.re_find(/<!doctype ([^>]*)>/,s);
 }
@@ -235,9 +235,9 @@ return doc;
  * used as input to as-hiccup or as-hickory.
  */
 hickory.core.parse = (function hickory$core$parse(s){
-var or__6490__auto__ = hickory.core.parse_dom_with_domparser(s);
-if(cljs.core.truth_(or__6490__auto__)){
-return or__6490__auto__;
+var or__6486__auto__ = hickory.core.parse_dom_with_domparser(s);
+if(cljs.core.truth_(or__6486__auto__)){
+return or__6486__auto__;
 } else {
 return hickory.core.parse_dom_with_write(s);
 }

@@ -21,45 +21,45 @@ return CodeMirror.fromTextArea(goog.dom.getElement(id),cljs.core.clj__GT_js(cljs
  * @constructor
  */
 html2hiccup.app.MainWindow = (function html2hiccup$app$MainWindow(){
-var this__13544__auto__ = this;
-React.Component.apply(this__13544__auto__,arguments);
+var this__13542__auto__ = this;
+React.Component.apply(this__13542__auto__,arguments);
 
-if(!((this__13544__auto__.initLocalState == null))){
-this__13544__auto__.state = this__13544__auto__.initLocalState();
+if(!((this__13542__auto__.initLocalState == null))){
+this__13542__auto__.state = this__13542__auto__.initLocalState();
 } else {
-this__13544__auto__.state = {};
+this__13542__auto__.state = {};
 }
 
-return this__13544__auto__;
+return this__13542__auto__;
 });
 
 html2hiccup.app.MainWindow.prototype = goog.object.clone(React.Component.prototype);
 
 var x14373_14411 = html2hiccup.app.MainWindow.prototype;
 x14373_14411.componentWillUpdate = ((function (x14373_14411){
-return (function (next_props__13485__auto__,next_state__13486__auto__){
-var this__13484__auto__ = this;
-om.next.merge_pending_props_BANG_(this__13484__auto__);
+return (function (next_props__13483__auto__,next_state__13484__auto__){
+var this__13482__auto__ = this;
+om.next.merge_pending_props_BANG_(this__13482__auto__);
 
-return om.next.merge_pending_state_BANG_(this__13484__auto__);
+return om.next.merge_pending_state_BANG_(this__13482__auto__);
 });})(x14373_14411))
 ;
 
 x14373_14411.shouldComponentUpdate = ((function (x14373_14411){
-return (function (next_props__13485__auto__,next_state__13486__auto__){
-var this__13484__auto__ = this;
-var or__6490__auto__ = cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(om.next.props(this__13484__auto__),goog.object.get(next_props__13485__auto__,"omcljs$value"));
-if(or__6490__auto__){
-return or__6490__auto__;
+return (function (next_props__13483__auto__,next_state__13484__auto__){
+var this__13482__auto__ = this;
+var or__6486__auto__ = cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(om.next.props(this__13482__auto__),goog.object.get(next_props__13483__auto__,"omcljs$value"));
+if(or__6486__auto__){
+return or__6486__auto__;
 } else {
-var and__6478__auto__ = this__13484__auto__.state;
-if(cljs.core.truth_(and__6478__auto__)){
-return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2((function (){var G__14376 = this__13484__auto__.state;
+var and__6474__auto__ = this__13482__auto__.state;
+if(cljs.core.truth_(and__6474__auto__)){
+return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2((function (){var G__14376 = this__13482__auto__.state;
 var G__14377 = "omcljs$state";
 return goog.object.get(G__14376,G__14377);
-})(),goog.object.get(next_state__13486__auto__,"omcljs$state"));
+})(),goog.object.get(next_state__13484__auto__,"omcljs$state"));
 } else {
-return and__6478__auto__;
+return and__6474__auto__;
 }
 }
 });})(x14373_14411))
@@ -67,46 +67,46 @@ return and__6478__auto__;
 
 x14373_14411.componentWillUnmount = ((function (x14373_14411){
 return (function (){
-var this__13484__auto__ = this;
-var r__13490__auto__ = om.next.get_reconciler(this__13484__auto__);
-var cfg__13491__auto__ = cljs.core.cst$kw$config.cljs$core$IFn$_invoke$arity$1(r__13490__auto__);
-var st__13492__auto__ = cljs.core.cst$kw$state.cljs$core$IFn$_invoke$arity$1(cfg__13491__auto__);
-var indexer__13489__auto__ = cljs.core.cst$kw$indexer.cljs$core$IFn$_invoke$arity$1(cfg__13491__auto__);
-if((st__13492__auto__ == null)){
+var this__13482__auto__ = this;
+var r__13488__auto__ = om.next.get_reconciler(this__13482__auto__);
+var cfg__13489__auto__ = cljs.core.cst$kw$config.cljs$core$IFn$_invoke$arity$1(r__13488__auto__);
+var st__13490__auto__ = cljs.core.cst$kw$state.cljs$core$IFn$_invoke$arity$1(cfg__13489__auto__);
+var indexer__13487__auto__ = cljs.core.cst$kw$indexer.cljs$core$IFn$_invoke$arity$1(cfg__13489__auto__);
+if((st__13490__auto__ == null)){
 } else {
-cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$variadic(st__13492__auto__,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$om$next_SLASH_queries], null),cljs.core.dissoc,cljs.core.array_seq([this__13484__auto__], 0));
+cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$variadic(st__13490__auto__,cljs.core.update_in,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$om$next_SLASH_queries], null),cljs.core.dissoc,cljs.core.array_seq([this__13482__auto__], 0));
 }
 
-if((indexer__13489__auto__ == null)){
+if((indexer__13487__auto__ == null)){
 return null;
 } else {
-return om.next.protocols.drop_component_BANG_(indexer__13489__auto__,this__13484__auto__);
+return om.next.protocols.drop_component_BANG_(indexer__13487__auto__,this__13482__auto__);
 }
 });})(x14373_14411))
 ;
 
 x14373_14411.componentDidUpdate = ((function (x14373_14411){
-return (function (prev_props__13487__auto__,prev_state__13488__auto__){
-var this__13484__auto__ = this;
-return om.next.clear_prev_props_BANG_(this__13484__auto__);
+return (function (prev_props__13485__auto__,prev_state__13486__auto__){
+var this__13482__auto__ = this;
+return om.next.clear_prev_props_BANG_(this__13482__auto__);
 });})(x14373_14411))
 ;
 
 x14373_14411.isMounted = ((function (x14373_14411){
 return (function (){
-var this__13484__auto__ = this;
-return cljs.core.boolean$(goog.object.getValueByKeys(this__13484__auto__,"_reactInternalInstance","_renderedComponent"));
+var this__13482__auto__ = this;
+return cljs.core.boolean$(goog.object.getValueByKeys(this__13482__auto__,"_reactInternalInstance","_renderedComponent"));
 });})(x14373_14411))
 ;
 
 x14373_14411.componentWillMount = ((function (x14373_14411){
 return (function (){
-var this__13484__auto__ = this;
-var indexer__13489__auto__ = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(om.next.get_reconciler(this__13484__auto__),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$config,cljs.core.cst$kw$indexer], null));
-if((indexer__13489__auto__ == null)){
+var this__13482__auto__ = this;
+var indexer__13487__auto__ = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(om.next.get_reconciler(this__13482__auto__),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$config,cljs.core.cst$kw$indexer], null));
+if((indexer__13487__auto__ == null)){
 return null;
 } else {
-return om.next.protocols.index_component_BANG_(indexer__13489__auto__,this__13484__auto__);
+return om.next.protocols.index_component_BANG_(indexer__13487__auto__,this__13482__auto__);
 }
 });})(x14373_14411))
 ;
@@ -217,8 +217,8 @@ html2hiccup.app.MainWindow.cljs$lang$type = true;
 
 html2hiccup.app.MainWindow.cljs$lang$ctorStr = "html2hiccup.app/MainWindow";
 
-html2hiccup.app.MainWindow.cljs$lang$ctorPrWriter = (function (this__13546__auto__,writer__13547__auto__,opt__13548__auto__){
-return cljs.core._write(writer__13547__auto__,"html2hiccup.app/MainWindow");
+html2hiccup.app.MainWindow.cljs$lang$ctorPrWriter = (function (this__13544__auto__,writer__13545__auto__,opt__13546__auto__){
+return cljs.core._write(writer__13545__auto__,"html2hiccup.app/MainWindow");
 });
 html2hiccup.app.mainwin = om.next.factory.cljs$core$IFn$_invoke$arity$1(html2hiccup.app.MainWindow);
 html2hiccup.app.init = (function html2hiccup$app$init(){
