@@ -144,7 +144,7 @@ return clojure.set.rename_keys(sablono.util.camel_case_keys(attrs),new cljs.core
  * Join the `classes` with a whitespace.
  */
 sablono.util.join_classes = (function sablono$util$join_classes(classes){
-return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",cljs.core.dedupe.cljs$core$IFn$_invoke$arity$1(cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__12268_SHARP_){
+return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__12268_SHARP_){
 if(typeof p1__12268_SHARP_ === 'string'){
 return p1__12268_SHARP_;
 } else {
