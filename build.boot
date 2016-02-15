@@ -13,7 +13,7 @@
                  [hiccups                       "0.3.0"]
                  [cljsjs/codemirror             "5.10.0-0"]
                  [org.omcljs/om                 "1.0.0-alpha22"]
-                 [sablono                       "0.6.0"]
+                 [sablono                       "0.6.1"]
                  [cljsjs/react                  "0.14.3-0"]
                  [cljsjs/react-dom              "0.14.3-1"]
                  [cljsjs/react-dom-server       "0.14.3-0"]]
