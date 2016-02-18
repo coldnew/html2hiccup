@@ -46,47 +46,6 @@ return (new om.transit.TempIdHandler());
 });
 
 om.transit.writer = (function om$transit$writer(var_args){
-var args13441 = [];
-var len__7544__auto___13444 = arguments.length;
-var i__7545__auto___13445 = (0);
-while(true){
-if((i__7545__auto___13445 < len__7544__auto___13444)){
-args13441.push((arguments[i__7545__auto___13445]));
-
-var G__13446 = (i__7545__auto___13445 + (1));
-i__7545__auto___13445 = G__13446;
-continue;
-} else {
-}
-break;
-}
-
-var G__13443 = args13441.length;
-switch (G__13443) {
-case 0:
-return om.transit.writer.cljs$core$IFn$_invoke$arity$0();
-
-break;
-case 1:
-return om.transit.writer.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
-
-break;
-default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args13441.length)].join('')));
-
-}
-});
-
-om.transit.writer.cljs$core$IFn$_invoke$arity$0 = (function (){
-return om.transit.writer.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
-});
-
-om.transit.writer.cljs$core$IFn$_invoke$arity$1 = (function (opts){
-return cognitect.transit.writer.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$json,cljs.core.assoc_in(opts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$handlers,om.tempid.TempId], null),(new om.transit.TempIdHandler())));
-});
-
-om.transit.writer.cljs$lang$maxFixedArity = 1;
-om.transit.reader = (function om$transit$reader(var_args){
 var args13448 = [];
 var len__7544__auto___13451 = arguments.length;
 var i__7545__auto___13452 = (0);
@@ -105,6 +64,47 @@ break;
 var G__13450 = args13448.length;
 switch (G__13450) {
 case 0:
+return om.transit.writer.cljs$core$IFn$_invoke$arity$0();
+
+break;
+case 1:
+return om.transit.writer.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
+
+break;
+default:
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args13448.length)].join('')));
+
+}
+});
+
+om.transit.writer.cljs$core$IFn$_invoke$arity$0 = (function (){
+return om.transit.writer.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentArrayMap.EMPTY);
+});
+
+om.transit.writer.cljs$core$IFn$_invoke$arity$1 = (function (opts){
+return cognitect.transit.writer.cljs$core$IFn$_invoke$arity$2(cljs.core.cst$kw$json,cljs.core.assoc_in(opts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.cst$kw$handlers,om.tempid.TempId], null),(new om.transit.TempIdHandler())));
+});
+
+om.transit.writer.cljs$lang$maxFixedArity = 1;
+om.transit.reader = (function om$transit$reader(var_args){
+var args13455 = [];
+var len__7544__auto___13458 = arguments.length;
+var i__7545__auto___13459 = (0);
+while(true){
+if((i__7545__auto___13459 < len__7544__auto___13458)){
+args13455.push((arguments[i__7545__auto___13459]));
+
+var G__13460 = (i__7545__auto___13459 + (1));
+i__7545__auto___13459 = G__13460;
+continue;
+} else {
+}
+break;
+}
+
+var G__13457 = args13455.length;
+switch (G__13457) {
+case 0:
 return om.transit.reader.cljs$core$IFn$_invoke$arity$0();
 
 break;
@@ -113,7 +113,7 @@ return om.transit.reader.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args13448.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args13455.length)].join('')));
 
 }
 });

@@ -97,7 +97,7 @@ return sablono.util.as_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(se
  * Returns camel case version of the key, e.g. :http-equiv becomes :httpEquiv.
  */
 sablono.util.camel_case = (function sablono$util$camel_case(k){
-if(cljs.core.truth_(k)){
+if(((k instanceof cljs.core.Keyword)) || (typeof k === 'string') || ((k instanceof cljs.core.Symbol))){
 var vec__12265 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(cljs.core.name(k),/-/);
 var first_word = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12265,(0),null);
 var words = cljs.core.nthnext(vec__12265,(1));
@@ -107,7 +107,7 @@ return k;
 return cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(clojure.string.join.cljs$core$IFn$_invoke$arity$1(cljs.core.conj.cljs$core$IFn$_invoke$arity$2(cljs.core.map.cljs$core$IFn$_invoke$arity$2(clojure.string.capitalize,words),first_word)));
 }
 } else {
-return null;
+return k;
 }
 });
 /**
@@ -144,14 +144,14 @@ return clojure.set.rename_keys(sablono.util.camel_case_keys(attrs),new cljs.core
  * Join the `classes` with a whitespace.
  */
 sablono.util.join_classes = (function sablono$util$join_classes(classes){
-return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__12268_SHARP_){
+return clojure.string.join.cljs$core$IFn$_invoke$arity$2(" ",cljs.core.flatten(cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__12268_SHARP_){
 if(typeof p1__12268_SHARP_ === 'string'){
 return p1__12268_SHARP_;
 } else {
 return cljs.core.seq(p1__12268_SHARP_);
 
 }
-}),classes))));
+}),classes)));
 });
 /**
  * Return true if the element `type` needs to be wrapped.
