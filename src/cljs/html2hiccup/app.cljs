@@ -37,7 +37,6 @@
 (defui MainWindow
   Object
   (componentDidMount [this]
-                     ;; (set! (.-value (gdom/getElement "htmlEdit") ) "asd")
                      (let [htmlEdit (create-editor "htmlEdit"
                                                    {:autofocus true
                                                     :mode "text/html"
