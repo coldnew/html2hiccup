@@ -2,8 +2,8 @@
   (:require [goog.dom       :as gdom]
             [om.next        :as om   :refer-macros [defui]]
             [sablono.core   :as html :refer-macros [html]]
-            [hickory.core   :as hickory]
-            [clojure.string :as str]
+            ;; libraries
+            [html2hiccup.converter :refer [html->hiccup]]
             ;; codemirror and it's friends
             [cljsjs.codemirror]
             [cljsjs.codemirror.mode.xml]
@@ -26,25 +26,6 @@
     </p>
   </div>
 </div>")
-
-(defn- html->hiccup
-  "Convert Html syntax to Hiccup syntax, return result in string."
-  [content]
-  (-> content
-      hickory/parse
-      hickory/as-hiccup
-      str
-      (str/replace #"\((.*)\)" "$1")                 ; remove first/last ()
-      (str/replace #"\"\\n\s*\"" "")                 ; remove weird "\n    "
-      (str/replace #"\"\\n\s*(.*)\\n\s*\"" "\"$1\"") ; remove weird "\n    "
-      (str/replace #"\"\\n\s*(.*)" "\"$1")           ; remove weird "\n    "
-      (str/replace #"\"(.*)\\n\s*\"" "\"$1\"")       ; remove weird "\n    "
-      (str/replace #"\[" "\n[")                      ; start every opening [ on new line
-      (str/replace #"\n\[:html" "[:html")            ; first line doesn't neet to add newline char
-      (str/replace #" \{\}" "")                      ; remove empty {}
-      (str/replace #"\s*\n" "\n")                    ; remove space in line-end
-      (str/replace #"]\s*]" "]]")                    ; close ] tag
-      identity))
 
 (defn- create-editor [id cfg]
   (.fromTextArea js/CodeMirror (gdom/getElement id)
