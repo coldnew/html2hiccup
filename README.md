@@ -1,17 +1,22 @@
 # html2hiccup
 [![Circle CI](https://circleci.com/gh/coldnew/html2hiccup/tree/master.svg?style=svg)](https://circleci.com/gh/coldnew/html2hiccup/tree/master)
 [![Dependencies Status](https://jarkeeper.com/coldnew/html2hiccup/status.svg)](https://jarkeeper.com/coldnew/html2hiccup)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/coldnew/pangu.clj/master/LICENSE)
 
-A [Hoplon][3] project designed to...well, that part is up to you.
+Convert HTML to Hiccup syntax on-the-fly.
 
-## Dependencies
+This app is entirely client-side rednering, powered by ClojureScript and [hickory](https://github.com/davidsantiago/hickory).
 
-- java 1.7+
-- [boot][1]
+See [Online DEMO](https://coldnew.github.io/html2hiccup/) here.
 
-## Usage
 ### Development
-1. Start the `dev` task. In a terminal run:
+
+1. Install needed css/js by bower
+   ```bash
+   $ bower install
+   ```
+
+2. Start the `dev` task. In a terminal run:
     ```bash
     $ boot dev
     ```
@@ -21,12 +26,13 @@ A [Hoplon][3] project designed to...well, that part is up to you.
     - auto reload the html page on changes
     - Clojurescript REPL
 
-2. Go to [http://localhost:8000][2] in your browser. You should see "Hello, Hoplon!".
+3. Go to [http://localhost:3000][2] in your browser.
 
-3. If you edit and save a file, the task will recompile the code and reload the
+4. If you edit and save a file, the task will recompile the code and reload the
    browser to show the updated version.
 
 ### Production
+
 1. Run the `prod` task. In a terminal run:
     ```bash
     $ boot prod
@@ -37,8 +43,6 @@ A [Hoplon][3] project designed to...well, that part is up to you.
 
 ## License
 
-Copyright © 2016, **Your Name Goes Here**
+Copyright © 2016 Yen-Chin, Lee <<coldnew.tw@gmail.com>>
 
-[1]: http://boot-clj.com
-[2]: http://localhost:8000
-[3]: http://hoplon.io
+Distributed under the [MIT License](http://opensource.org/licenses/MIT).
