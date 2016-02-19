@@ -7,7 +7,7 @@ Convert HTML to Hiccup syntax on-the-fly.
 
 This app is entirely client-side rednering, powered by ClojureScript and [hickory](https://github.com/davidsantiago/hickory).
 
-See [Online DEMO](https://coldnew.github.io/html2hiccup/) here.
+[Online DEMO](https://coldnew.github.io/html2hiccup/).
 
 ### Development
 
