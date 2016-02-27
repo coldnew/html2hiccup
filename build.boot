@@ -4,7 +4,7 @@
                  [com.cemerick/piggieback       "0.2.1"      :scope "test"]
                  [weasel                        "0.7.0"      :scope "test"]
                  [org.clojure/tools.nrepl       "0.2.12"     :scope "test"]
-                 [pandeiro/boot-http            "0.7.2"      :scope "test"]
+                 [pandeiro/boot-http            "0.7.3"      :scope "test"]
                  [adzerk/boot-reload            "0.4.5"]
                  [hoplon/boot-hoplon            "0.1.13"]
                  [org.clojure/clojure           "1.8.0"]
