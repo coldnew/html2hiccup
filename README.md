@@ -5,7 +5,7 @@
 
 Convert HTML to Hiccup syntax on-the-fly.
 
-This app is entirely client-side rednering, powered by ClojureScript and [hickory](https://github.com/davidsantiago/hickory).
+This app is entirely client-side rednering, powered by [ClojureScript](https://github.com/clojure/clojurescript) and [hickory](https://github.com/davidsantiago/hickory).
 
 [Online DEMO](https://coldnew.github.io/html2hiccup/).
 
@@ -20,16 +20,21 @@ This app is entirely client-side rednering, powered by ClojureScript and [hickor
     ```bash
     $ boot dev
     ```
-    This will give you a  Hoplon development setup with:
+    This will give you a development setup with:
     - auto compilation on file changes
     - audible warning for compilation success or failures
     - auto reload the html page on changes
     - Clojurescript REPL
 
-3. Go to [http://localhost:3000][2] in your browser.
+3. Go to http://localhost:3000 in your browser.
 
 4. If you edit and save a file, the task will recompile the code and reload the
    browser to show the updated version.
+
+5. If you want to connect to ClojureScript REPL, enter following in Clojure REPL:
+   ```clojure
+   (start-repl)
+   ```
 
 ### Production
 
