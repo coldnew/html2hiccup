@@ -11,7 +11,7 @@
                  [org.clojure/clojurescript     "1.8.51"]
                  [hickory                       "0.6.0"]
                  [hiccups                       "0.3.0"]
-                 [cljsjs/codemirror             "5.11.0-0"]
+                 [cljsjs/codemirror             "5.11.0-1"]
                  [org.omcljs/om                 "1.0.0-alpha22" :exclusions [cljsjs/react]]
                  [sablono                       "0.7.1"]
                  [cljsjs/react                  "15.0.2-0"]
