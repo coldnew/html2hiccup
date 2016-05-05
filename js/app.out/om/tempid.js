@@ -61,23 +61,23 @@ return (new om.tempid.TempId(id,__hash));
 });
 
 om.tempid.tempid = (function om$tempid$tempid(var_args){
-var args15117 = [];
-var len__7610__auto___15120 = arguments.length;
-var i__7611__auto___15121 = (0);
+var args15148 = [];
+var len__7610__auto___15151 = arguments.length;
+var i__7611__auto___15152 = (0);
 while(true){
-if((i__7611__auto___15121 < len__7610__auto___15120)){
-args15117.push((arguments[i__7611__auto___15121]));
+if((i__7611__auto___15152 < len__7610__auto___15151)){
+args15148.push((arguments[i__7611__auto___15152]));
 
-var G__15122 = (i__7611__auto___15121 + (1));
-i__7611__auto___15121 = G__15122;
+var G__15153 = (i__7611__auto___15152 + (1));
+i__7611__auto___15152 = G__15153;
 continue;
 } else {
 }
 break;
 }
 
-var G__15119 = args15117.length;
-switch (G__15119) {
+var G__15150 = args15148.length;
+switch (G__15150) {
 case 0:
 return om.tempid.tempid.cljs$core$IFn$_invoke$arity$0();
 
@@ -87,7 +87,7 @@ return om.tempid.tempid.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args15117.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args15148.length)].join('')));
 
 }
 });
