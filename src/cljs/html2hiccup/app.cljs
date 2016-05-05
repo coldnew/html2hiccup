@@ -2,8 +2,7 @@
   (:require-macros [html2hiccup.macros :refer [read-resource]])
   (:require [goog.dom       :as gdom]
             [om.next        :as om   :refer-macros [defui]]
-            [sablono.core   :as html :refer-macros [html]]
-            [om.dom :as dom]
+            [om.dom         :as dom]
             [cljsjs.material-ui]
             [cljs-react-material-ui.core :as ui]
             [cljs-react-material-ui.icons :as ic]
