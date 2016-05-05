@@ -12,11 +12,14 @@
                  [hickory                       "0.6.0"]
                  [hiccups                       "0.3.0"]
                  [cljsjs/codemirror             "5.11.0-0"]
-                 [org.omcljs/om                 "1.0.0-alpha22"]
+                 [org.omcljs/om                 "1.0.0-alpha22" :exclusions [cljsjs/react]]
                  [sablono                       "0.6.2"]
                  [cljsjs/react                  "0.14.3-0"]
                  [cljsjs/react-dom              "0.14.3-1"]
-                 [cljsjs/react-dom-server       "0.14.3-0"]]
+                 [cljsjs/react-dom-server       "0.14.3-0"]
+                 [cljs-react-material-ui        "0.2.11"]
+                 [cljs-http "0.1.40"]
+                 [org.clojure/core.async "0.2.374"]]
 
  :source-paths    #{"src/cljs"}
  :resource-paths  #{"resources"})

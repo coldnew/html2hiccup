@@ -1,0 +1,15 @@
+.mar-top-20 {
+    margin-top: 10px;
+}
+
+.CodeMirror {
+    height: calc(100vh - 100px);
+}
+
+#wrapper {
+    margin-bottom: -30px;
+}
+
+.footer, #wrapper:after {
+    height: 30px;
+}

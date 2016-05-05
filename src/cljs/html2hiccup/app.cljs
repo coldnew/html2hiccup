@@ -2,6 +2,10 @@
   (:require [goog.dom       :as gdom]
             [om.next        :as om   :refer-macros [defui]]
             [sablono.core   :as html :refer-macros [html]]
+            [om.dom :as dom]
+            [cljsjs.material-ui]
+            [cljs-react-material-ui.core :as ui]
+            [cljs-react-material-ui.icons :as ic]
             ;; libraries
             [html2hiccup.converter :refer [html->hiccup]]
             ;; codemirror and it's friends
@@ -58,22 +62,30 @@
                          ;; setup default value
                          (.setValue default-content))))
   (render [this]
-          (html
-           [:div.container
-            [:div.row
-             [:div.col-md-12 [:h2 "Html to Hiccup"]]]
-            [:div.row
-             ;; Html
-             [:div.col-md-6 [:h3 "HTML"]
-              [:textarea
-               {:id "htmlEdit" :class "form-control col-md-6"}]]
-             ;; Hiccup
-             [:div.col-md-6 [:h3 "Hiccup"]
-              [:textarea
-               {:id "hiccupEdit" :class "form-control col-md-6"}]]
-             ;; footer
-             [:p "© 2016 Yen-Chin, Lee <coldnew>"]
-             ]])))
+          (ui/mui-theme-provider
+           {:mui-theme (ui/get-mui-theme
+                        {:palette {:primary1-color (ui/color :deep-orange-500)}})}
+           (dom/div {:class-name "container"}
+                    ;; titlebar
+                    (ui/app-bar {:title "Html to Hiccup"
+                                 :show-menu-icon-button false
+                                 :icon-element-right (ui/icon-button {:icon-class-name "muidocs-icon-custom-github"
+                                                                      :touch true
+                                                                      :link-button true
+                                                                      :href "https://github.com/coldnew/html2hiccup"
+                                                                      :target :_blank})})
+                    ;; textareas
+                    (ui/paper {:class-name "row mar-top-20" :id "wrapper"}
+                              ;; left
+                              (dom/div #js {:className "col-md-6"}
+                                       (dom/textarea #js {:id "htmlEdit"}))
+                              ;; right
+                              (dom/div #js {:class-name "col-md-6"}
+                                       (dom/textarea #js {:id "hiccupEdit"})))
+                    ;; footer
+                    (dom/div #js {:className "footer"}
+                             (dom/div #js {:className "container"}
+                                      "© 2016 Yen-Chin, Lee <coldnew>"))))))
 
 (def mainwin (om/factory MainWindow))
 
