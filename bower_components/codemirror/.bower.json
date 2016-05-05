@@ -25,7 +25,7 @@
     "tag": "5.11.0",
     "commit": "7d43f32bb56f83a9c47addb3f91170b3102f3ead"
   },
-  "_source": "git://github.com/marijnh/CodeMirror.git",
+  "_source": "https://github.com/marijnh/CodeMirror.git",
   "_target": "5.11.0",
   "_originalSource": "codemirror"
 }

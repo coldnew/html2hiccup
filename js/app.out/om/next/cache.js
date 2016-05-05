@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.228 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.8.51 {:static-fns true, :optimize-constants true}
 goog.provide('om.next.cache');
 goog.require('cljs.core');
 
@@ -15,11 +15,11 @@ om.next.cache.Cache.prototype.add = (function (id,x){
 var self__ = this;
 var this$ = this;
 if((self__.size <= self__.arr.length)){
-var id_SINGLEQUOTE__12124 = self__.arr.shift();
-cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(self__.index,((function (id_SINGLEQUOTE__12124,this$){
-return (function (p1__12123_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(p1__12123_SHARP_,id_SINGLEQUOTE__12124),id,x);
-});})(id_SINGLEQUOTE__12124,this$))
+var id_SINGLEQUOTE__12256 = self__.arr.shift();
+cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(self__.index,((function (id_SINGLEQUOTE__12256,this$){
+return (function (p1__12255_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(p1__12255_SHARP_,id_SINGLEQUOTE__12256),id,x);
+});})(id_SINGLEQUOTE__12256,this$))
 );
 } else {
 cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(self__.index,cljs.core.assoc,id,x);
@@ -42,8 +42,8 @@ om.next.cache.Cache.cljs$lang$type = true;
 
 om.next.cache.Cache.cljs$lang$ctorStr = "om.next.cache/Cache";
 
-om.next.cache.Cache.cljs$lang$ctorPrWriter = (function (this__7084__auto__,writer__7085__auto__,opt__7086__auto__){
-return cljs.core._write(writer__7085__auto__,"om.next.cache/Cache");
+om.next.cache.Cache.cljs$lang$ctorPrWriter = (function (this__7146__auto__,writer__7147__auto__,opt__7148__auto__){
+return cljs.core._write(writer__7147__auto__,"om.next.cache/Cache");
 });
 
 om.next.cache.__GT_Cache = (function om$next$cache$__GT_Cache(arr,index,size){
@@ -51,7 +51,7 @@ return (new om.next.cache.Cache(arr,index,size));
 });
 
 om.next.cache.cache = (function om$next$cache$cache(size){
-return (new om.next.cache.Cache([],(function (){var G__12126 = cljs.core.PersistentArrayMap.EMPTY;
-return (cljs.core.atom.cljs$core$IFn$_invoke$arity$1 ? cljs.core.atom.cljs$core$IFn$_invoke$arity$1(G__12126) : cljs.core.atom.call(null,G__12126));
+return (new om.next.cache.Cache([],(function (){var G__12258 = cljs.core.PersistentArrayMap.EMPTY;
+return (cljs.core.atom.cljs$core$IFn$_invoke$arity$1 ? cljs.core.atom.cljs$core$IFn$_invoke$arity$1(G__12258) : cljs.core.atom.call(null,G__12258));
 })(),size));
 });

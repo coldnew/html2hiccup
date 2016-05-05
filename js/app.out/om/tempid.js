@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 1.7.228 {:static-fns true, :optimize-constants true}
+// Compiled by ClojureScript 1.8.51 {:static-fns true, :optimize-constants true}
 goog.provide('om.tempid');
 goog.require('cljs.core');
 
@@ -52,8 +52,8 @@ om.tempid.TempId.cljs$lang$type = true;
 
 om.tempid.TempId.cljs$lang$ctorStr = "om.tempid/TempId";
 
-om.tempid.TempId.cljs$lang$ctorPrWriter = (function (this__7084__auto__,writer__7085__auto__,opt__7086__auto__){
-return cljs.core._write(writer__7085__auto__,"om.tempid/TempId");
+om.tempid.TempId.cljs$lang$ctorPrWriter = (function (this__7146__auto__,writer__7147__auto__,opt__7148__auto__){
+return cljs.core._write(writer__7147__auto__,"om.tempid/TempId");
 });
 
 om.tempid.__GT_TempId = (function om$tempid$__GT_TempId(id,__hash){
@@ -61,23 +61,23 @@ return (new om.tempid.TempId(id,__hash));
 });
 
 om.tempid.tempid = (function om$tempid$tempid(var_args){
-var args13423 = [];
-var len__7544__auto___13426 = arguments.length;
-var i__7545__auto___13427 = (0);
+var args15117 = [];
+var len__7610__auto___15120 = arguments.length;
+var i__7611__auto___15121 = (0);
 while(true){
-if((i__7545__auto___13427 < len__7544__auto___13426)){
-args13423.push((arguments[i__7545__auto___13427]));
+if((i__7611__auto___15121 < len__7610__auto___15120)){
+args15117.push((arguments[i__7611__auto___15121]));
 
-var G__13428 = (i__7545__auto___13427 + (1));
-i__7545__auto___13427 = G__13428;
+var G__15122 = (i__7611__auto___15121 + (1));
+i__7611__auto___15121 = G__15122;
 continue;
 } else {
 }
 break;
 }
 
-var G__13425 = args13423.length;
-switch (G__13425) {
+var G__15119 = args15117.length;
+switch (G__15119) {
 case 0:
 return om.tempid.tempid.cljs$core$IFn$_invoke$arity$0();
 
@@ -87,7 +87,7 @@ return om.tempid.tempid.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
 break;
 default:
-throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args13423.length)].join('')));
+throw (new Error([cljs.core.str("Invalid arity: "),cljs.core.str(args15117.length)].join('')));
 
 }
 });
