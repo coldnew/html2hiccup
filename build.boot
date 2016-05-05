@@ -21,7 +21,7 @@
                  [cljs-http                     "0.1.40"]
                  [org.clojure/core.async        "0.2.374"]]
 
- :source-paths    #{"src/cljs"}
+ :source-paths    #{"src/clj" "src/cljs"}
  :resource-paths  #{"resources"})
 
 (require

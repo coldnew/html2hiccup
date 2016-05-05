@@ -1,4 +1,5 @@
 (ns html2hiccup.app
+  (:require-macros [html2hiccup.macros :refer [read-resource]])
   (:require [goog.dom       :as gdom]
             [om.next        :as om   :refer-macros [defui]]
             [sablono.core   :as html :refer-macros [html]]
@@ -19,17 +20,7 @@
 (enable-console-print!)
 
 (def default-content
-  "<div class=\"container\">
-  <div class=\"row\">
-    <h2>Html to Hiccup</h2>
-    <a href=\"https://github.com/coldnew/html2hiccup\">
-      Fork me from GitHub
-    </a>
-    <p>
-      Edit Html here and see the generated Hiccup syntax :)
-    </p>
-  </div>
-</div>")
+  (read-resource "data/template.html"))
 
 (defn- create-editor [id cfg]
   (.fromTextArea js/CodeMirror (gdom/getElement id)
