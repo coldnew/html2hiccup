@@ -9,7 +9,7 @@ goog.require('html2hiccup.converter');
 goog.require('om.next');
 goog.require('cljs_react_material_ui.core');
 cljs.core.enable_console_print_BANG_();
-html2hiccup.app.default_content = "<html>\n  <head></head>\n  <body>\n    <div class=\\\"container\\\">\n      <div class=\\\"row\\\">\n        <h2>Html to Hiccup</h2>\n        <a href=\\\"https://github.com/coldnew/html2hiccup\\\">\n          Fork me from GitHub\n        </a>\n        <p>\n          Edit Html here and see the generated Hiccup syntax :)\n        </p>\n      </div>\n    </div>\n  </body>\n</html>\n";
+html2hiccup.app.default_content = "<html>\n  <head></head>\n  <body>\n    <div class=\"container\">\n      <div class=\"row\">\n        <h2>Html to Hiccup</h2>\n        <a href=\"https://github.com/coldnew/html2hiccup\">\n          Fork me from GitHub\n        </a>\n        <p>\n          Edit Html here and see the generated Hiccup syntax :)\n        </p>\n      </div>\n    </div>\n  </body>\n</html>\n";
 html2hiccup.app.create_editor = (function html2hiccup$app$create_editor(id,cfg){
 return CodeMirror.fromTextArea(goog.dom.getElement(id),cljs.core.clj__GT_js(cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 4, [cljs.core.cst$kw$lineNumbers,true,cljs.core.cst$kw$indentWithTabs,false,cljs.core.cst$kw$matchBrackets,true,cljs.core.cst$kw$indentAuto,true], null),cfg], 0))));
 });
