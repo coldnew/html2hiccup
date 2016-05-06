@@ -5,3 +5,4 @@
 /resources/bower_components/
 /out/
 /node_modules/
+*.min.css
