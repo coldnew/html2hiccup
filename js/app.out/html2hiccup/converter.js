@@ -9,14 +9,21 @@ goog.require('clojure.walk');
  */
 html2hiccup.converter.whitespace_QMARK_ = cljs.core.every_pred.cljs$core$IFn$_invoke$arity$2(cljs.core.string_QMARK_,cljs.core.partial.cljs$core$IFn$_invoke$arity$2(cljs.core.re_matches,/\s*/));
 /**
- * Walk a given Hiccup form and remove all pure whitespace.
+ * Fixup hiccup tree generate by hickory, this function do:
+ *   1. remove wired \n\s* in string.
+ *   2. remove all pure whitespace.
  */
-html2hiccup.converter.remove_whitespace = (function html2hiccup$converter$remove_whitespace(row){
+html2hiccup.converter.fixup_hiccup = (function html2hiccup$converter$fixup_hiccup(row){
 return clojure.walk.prewalk((function (form){
+if(typeof form === 'string'){
+return clojure.string.replace(form,/\n\s*/,"");
+} else {
 if(cljs.core.vector_QMARK_(form)){
 return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,cljs.core.remove.cljs$core$IFn$_invoke$arity$2(html2hiccup.converter.whitespace_QMARK_,form));
 } else {
 return form;
+
+}
 }
 }),row);
 });
@@ -24,5 +31,5 @@ return form;
  * Convert Html syntax to Hiccup syntax, return result in string.
  */
 html2hiccup.converter.html__GT_hiccup = (function html2hiccup$converter$html__GT_hiccup(content){
-return cljs.core.identity(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace([cljs.core.str(html2hiccup.converter.remove_whitespace(hickory.core.as_hiccup(hickory.core.parse(content))))].join(''),/\((.*)\)/,"$1"),/\"\\n\s*\"/,""),/\\n      /,""),/\\n    /,""),/\[/,"\n["),/\n\[:html/,"[:html"),/ \{\}/,""),/\s*\n/,"\n"),/]\s*]/,"]]"));
+return cljs.core.identity(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace([cljs.core.str(html2hiccup.converter.fixup_hiccup(hickory.core.as_hiccup(hickory.core.parse(content))))].join(''),/\((.*)\)/,"$1"),/\[/,"\n["),/\n\[:html/,"[:html"),/ \{\}/,""),/]\s*]/,"]]"));
 });
