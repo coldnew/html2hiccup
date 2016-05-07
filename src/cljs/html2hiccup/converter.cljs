@@ -37,4 +37,5 @@
       (str/replace #" \{\}" "")           ; remove empty {}
       (str/replace #"]\s*]" "]]")         ; close ] tag
       (str/replace #"}\s*\"" "}\n\"" )    ; add newline between } and ""
+      (str/replace #"]]" "]\n]" )         ; add newline between ] and ]
       identity))
