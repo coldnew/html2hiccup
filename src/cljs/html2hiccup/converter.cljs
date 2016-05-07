@@ -36,4 +36,5 @@
       (str/replace #"\n\[:html" "[:html") ; first line doesn't neet to add newline char
       (str/replace #" \{\}" "")           ; remove empty {}
       (str/replace #"]\s*]" "]]")         ; close ] tag
+      (str/replace #"}\s*\"" "}\n\"" )    ; add newline between } and ""
       identity))
