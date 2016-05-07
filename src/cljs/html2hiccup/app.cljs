@@ -57,7 +57,7 @@
                         {:palette {:primary1-color (ui/color :deep-orange-500)}})}
            (dom/div {:class-name "container"}
                     ;; titlebar
-                    (ui/app-bar {:title "Html to Hiccup"
+                    (ui/app-bar {:title "HTML to Hiccup"
                                  :show-menu-icon-button false
                                  :icon-element-right (ui/icon-button {:icon-class-name "muidocs-icon-custom-github"
                                                                       :touch true
