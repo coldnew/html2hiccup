@@ -6,17 +6,13 @@
                  [org.clojure/tools.nrepl       "0.2.12"     :scope "test"]
                  [pandeiro/boot-http            "0.7.3"      :scope "test"]
                  [adzerk/boot-reload            "0.4.7"]
-                 [hoplon/boot-hoplon            "0.1.13"]
                  [org.clojure/clojure           "1.8.0"]
                  [org.clojure/clojurescript     "1.8.51"]
                  [hickory                       "0.6.0"]
-                 [hiccups                       "0.3.0"]
                  [cljsjs/codemirror             "5.11.0-1"]
                  [org.omcljs/om                 "1.0.0-alpha22" :exclusions [cljsjs/react]]
                  [cljs-react-material-ui        "0.2.11"]
-                 [cljs-http                     "0.1.40"]
-                 [asset-minifier                "0.1.8"]
-                 [org.clojure/core.async        "0.2.374"]]
+                 [asset-minifier                "0.1.8"]]
 
  :source-paths    #{"src/clj" "src/cljs"}
  :resource-paths  #{"resources"})
