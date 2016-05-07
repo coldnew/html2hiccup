@@ -8,14 +8,19 @@
   "Is this a string, and does it consist of only whitespace?"
   (every-pred string? (partial re-matches #"\s*")))
 
-(defn ^:private remove-whitespace
-  "Walk a given Hiccup form and remove all pure whitespace."
+(defn ^:private fixup-hiccup
+  "Fixup hiccup tree generate by hickory, this function do:
+  1. remove wired \\n\\s* in string.
+  2. remove all pure whitespace."
   [row]
   (walk/prewalk
    (fn [form]
-     (if (vector? form)
-       (into [] (remove whitespace? form))
-       form))
+     (cond
+       ;; remove wired \n\s*
+       (string? form) (str/replace form #"\n\s*" "")
+       ;; remove all pure whitespace
+       (vector? form) (into [] (remove whitespace? form))
+       :else form))
    row))
 
 (defn html->hiccup
@@ -24,15 +29,11 @@
   (-> content
       hickory/parse
       hickory/as-hiccup
-      remove-whitespace
+      fixup-hiccup
       str
-      (str/replace #"\((.*)\)" "$1")      ; remove first/last ()
-      (str/replace #"\"\\n\s*\"" "")      ; remove weird "\n    "
-      (str/replace #"\\n      " "")       ; remove weird "\n    "
-      (str/replace #"\\n    " "")         ; remove weird "\n    "
-      (str/replace #"\[" "\n[")           ; start every opening [ on new line
+      (str/replace #"\((.*)\)" "$1")    ; remove first/last ()
+      (str/replace #"\[" "\n[")         ; start every opening [ on new line
       (str/replace #"\n\[:html" "[:html") ; first line doesn't neet to add newline char
       (str/replace #" \{\}" "")           ; remove empty {}
-      (str/replace #"\s*\n" "\n")         ; remove space in line-end
       (str/replace #"]\s*]" "]]")         ; close ] tag
       identity))
