@@ -31,5 +31,5 @@ return form;
  * Convert Html syntax to Hiccup syntax, return result in string.
  */
 html2hiccup.converter.html__GT_hiccup = (function html2hiccup$converter$html__GT_hiccup(content){
-return cljs.core.identity(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace([cljs.core.str(html2hiccup.converter.fixup_hiccup(hickory.core.as_hiccup(hickory.core.parse(content))))].join(''),/\((.*)\)/,"$1"),/\[/,"\n["),/\n\[:html/,"[:html"),/ \{\}/,""),/]\s*]/,"]]"));
+return cljs.core.identity(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace(clojure.string.replace([cljs.core.str(html2hiccup.converter.fixup_hiccup(hickory.core.as_hiccup(hickory.core.parse(content))))].join(''),/\((.*)\)/,"$1"),/\[/,"\n["),/\n\[:html/,"[:html"),/ \{\}/,""),/]\s*]/,"]]"),/}\s*\"/,"}\n\""));
 });
