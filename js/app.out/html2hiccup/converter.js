@@ -16,7 +16,7 @@ html2hiccup.converter.whitespace_QMARK_ = cljs.core.every_pred.cljs$core$IFn$_in
 html2hiccup.converter.fixup_hiccup = (function html2hiccup$converter$fixup_hiccup(row){
 return clojure.walk.prewalk((function (form){
 if(typeof form === 'string'){
-return clojure.string.replace(form,/\n\s*/,"");
+return clojure.string.replace(clojure.string.trim(clojure.string.trim_newline(form)),/\n\s*/,"\n");
 } else {
 if(cljs.core.vector_QMARK_(form)){
 return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentVector.EMPTY,cljs.core.remove.cljs$core$IFn$_invoke$arity$2(html2hiccup.converter.whitespace_QMARK_,form));
