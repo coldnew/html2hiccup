@@ -17,7 +17,9 @@
    (fn [form]
      (cond
        ;; remove wired \n\s*
-       (string? form) (str/replace form #"\n\s*" "")
+       (string? form) (-> form
+                          str/trim-newline str/trim
+                          (str/replace #"\n\s*" "\n"))
        ;; remove all pure whitespace
        (vector? form) (into [] (remove whitespace? form))
        :else form))
